@@ -12,7 +12,7 @@ class HelloWrapper extends Component <any, any> {
     render() {
         return (
             <div>
-                <Hello compiler="TypeScript" framework="dfbdgbrb" />
+                <Hello compiler="TypeScript" framework="React" />
                 <Link to="/second">
                     <button> Click </button>
                 </Link>

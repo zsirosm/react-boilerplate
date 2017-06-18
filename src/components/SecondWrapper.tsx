@@ -11,7 +11,7 @@ export class SecondWrapper extends Component <void, any> {
     render() {
         return (
             <div>
-                <Hello compiler="the second hello page" framework="it IS now working!!" />
+                <Hello compiler="hot module reloading" framework="is now working" />
                 <Link to="/">
                     <button> Click </button>
                 </Link>

@@ -16,7 +16,9 @@ class Hello extends Component <HelloProps, any> {
   };
   render() {
     return (
+      <div>
       <h1> Hello from {this.state.compiler} and also {this.state.framework} </h1>
+      </div>
     );
   }    
 }
