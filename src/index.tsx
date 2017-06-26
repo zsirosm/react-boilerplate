@@ -17,13 +17,6 @@ export const App = ReactDOM.render(
     document.getElementById("example")
 );
 
-// export const App = ReactDOM.render(
-//     <AppContainer>
-//       <HelloWrapper />
-//     </AppContainer>,
-//     rootEl
-// );
-
 if (module.hot) {
   console.log('module is hot');
   module.hot.accept('./routes/routes', () => {

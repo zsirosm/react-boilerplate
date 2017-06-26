@@ -1,7 +1,7 @@
-const webpack = require('webpack');
-const path = require("path");
+import * as webpack from 'webpack';
+import * as path from 'path';
 
-var clientConfig = {
+const clientConfig = {
     entry: [
             "react-hot-loader/patch",
             "./src/index.tsx"
@@ -44,7 +44,7 @@ var clientConfig = {
     // dependencies, which allows browsers to cache those libraries between builds.
 }
 
-var serverConfig = {
+const serverConfig = {
     target: 'node',
     entry: {
         server: "./src/server/server.tsx",
@@ -72,4 +72,6 @@ var serverConfig = {
     },
 }
 
-module.exports = [clientConfig, serverConfig]
+const config: webpack.Configuration = [clientConfig, serverConfig]
+
+export default config;
