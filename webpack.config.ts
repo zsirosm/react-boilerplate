@@ -12,7 +12,7 @@ const clientConfig = {
     },
 
     // Enable sourcemaps for debugging webpack's output.
-    devtool: "source-map",
+    devtool: 'whatever' as 'source-map',
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
@@ -23,15 +23,18 @@ const clientConfig = {
         new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
-        loaders: [
-            // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+        rules: [
             { 
                 test: /\.tsx?$/,
-                loaders: ["react-hot-loader/webpack", "awesome-typescript-loader"],
+                // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+                use: ["react-hot-loader/webpack", "awesome-typescript-loader"],
             },
-
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            { 
+                enforce: "pre" as 'pre',
+                test: /\.js$/,
+                // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+                use: "source-map-loader"
+            }
         ]
     },
     devServer: {
@@ -72,6 +75,6 @@ const serverConfig = {
     },
 }
 
-const config: webpack.Configuration = [clientConfig, serverConfig]
+const config: webpack.Configuration = clientConfig
 
 export default config;
