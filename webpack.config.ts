@@ -29,6 +29,16 @@ const clientConfig = {
                 // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
                 use: ["react-hot-loader/webpack", "awesome-typescript-loader"],
             },
+            {
+                test: /\.css?$/,
+                use: ["style-loader", {
+                    loader: 'typings-for-css-modules-loader',
+                        options: {
+                            modules: true,
+                            namedExport: true
+                        }
+                }]
+            },
             { 
                 enforce: "pre" as 'pre',
                 test: /\.js$/,

@@ -3,7 +3,9 @@ import * as ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { AppContainer } from 'react-hot-loader';
 
-import HelloWrapper from './components/HelloWrapper';
+import './style.css';
+
+// import HelloWrapper from './components/HelloWrapper';
 import ExampleRouter from './routes/routes';
 
 const rootEl = document.getElementById('example');

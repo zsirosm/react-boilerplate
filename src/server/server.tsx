@@ -29,7 +29,6 @@ server.get('*', (req, res) => {
             <head>
                 <meta charset="UTF-8" />
                 <title>Hello React!</title>
-                <link rel="stylesheet" type="text/css" href="/style.css">
             </head>
             <body>
                 <div id="example"></div>
