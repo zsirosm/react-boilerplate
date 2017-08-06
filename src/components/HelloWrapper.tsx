@@ -11,7 +11,7 @@ class HelloWrapper extends Component <any, any> {
     };
     render() {
         return (
-            <div className="wtf">
+            <div className='wtf'>
                 <Hello compiler="TypeScript" framework="React" />
                 <Link to="/second">
                     <button> Click </button>

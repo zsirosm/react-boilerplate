@@ -1,9 +1,9 @@
 
 h1 {
-    color: navy;
+    color: 'red';
     font-size: 60px;
 }
 
 .wtf {
-    background-color: 'red';
+    background-color: red;
 }
